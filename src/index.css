@@ -1,13 +1,69 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.albums {
+  width: 350px;
+}
+.albums > ul {
+  list-style: none;
+}
+.albums > ul > li {
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(158, 156, 156);
+}
+.albums > ul > li:hover {
+  color: black;
+}
+
+.photos {
+  width: 700px;
+}
+
+.photos > ul {
+  list-style: none;
+}
+
+.photos > ul > li {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  border: 1px solid lightgray;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.photos > ul > li > div {
+  position: relative;
+  top: 50px;
+  left: 10px;
+  font-size: 17px;
+}
+
+.not-active {
+  position: relative;
+  top: 400px;
+  left: 20px;
+}
+
+.not-active > b {
+  font-size: 40px;
+}
+
+.filter > input{
+  margin-top: 15px;
+  margin-left: 40px;
+  width: 690px;
+  height: 30px;
+  border: 1px solid lightgray;
 }
