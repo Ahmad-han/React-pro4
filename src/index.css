@@ -24,7 +24,9 @@ body {
 .albums > ul > li:hover {
   color: black;
 }
-
+.albums > ul > .selected {
+  background-color: antiquewhite;
+}
 .photos {
   width: 700px;
 }

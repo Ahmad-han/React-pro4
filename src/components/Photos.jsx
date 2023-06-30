@@ -3,9 +3,9 @@ import { Photo } from "./Photo"
 import { setFilteredText } from "../redux/action"
 
 export const Photos = () => {
-const photos = useSelector((state) => state.photos)
-const selectedUserId = useSelector((state) => state.selectedUserId)
-const filter = useSelector((state) => state.filter)
+const photos = useSelector((state) => state.photos.photos)
+const selectedUserId = useSelector((state) => state.albums.selectedUserId)
+const filter = useSelector((state) => state.photos.filter)
 const dispatch = useDispatch()
 const filteredPhotos = photos
     .filter((photo) => photo.albumId === selectedUserId)

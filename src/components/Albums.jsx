@@ -3,7 +3,7 @@ import { Album } from "./Album"
 
 
 export const Albums = () => {
-const albums = useSelector((state) => state.albums)
+const albums = useSelector((state) => state.albums.albums)
 
     return (
         <div className="albums">
