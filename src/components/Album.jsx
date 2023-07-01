@@ -4,7 +4,7 @@ import { selectId } from "../redux/action"
 
 
 export const Album = ({ album }) => {
-const newClass = useSelector((state) => state.albums.setClass)
+const selectedUserId = useSelector((state) => state.albums.selectedUserId) 
 const dispatch = useDispatch()
 const selectAlbumId = () => {
     dispatch(selectId(album.id))
@@ -12,7 +12,7 @@ const selectAlbumId = () => {
 
 
     return (
-        <li onClick={selectAlbumId}>
+        <li onClick={selectAlbumId} className={album.id === selectedUserId ? "selected" : "select"}>
             {album.title}
         </li>
     )

@@ -2,7 +2,6 @@ const initialState = {
     albums: [],
     selectedUserId: null,
     loadingAlbums: false,
-    setClass: false
 }
 
 export const albums = (state = initialState, action) => {

@@ -14,18 +14,25 @@ body {
 .albums > ul {
   list-style: none;
 }
-.albums > ul > li {
+.albums > ul > .select {
   margin-top: 15px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
   color: rgb(158, 156, 156);
 }
-.albums > ul > li:hover {
+.albums > ul > .select:hover {
   color: black;
 }
 .albums > ul > .selected {
-  background-color: antiquewhite;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(158, 156, 156);
+  color: black;
+  background-color: rgba(173, 216, 230, 0.541);
+  border-radius: 10px;
 }
 .photos {
   width: 700px;
