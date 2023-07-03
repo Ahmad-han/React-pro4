@@ -3,6 +3,7 @@ import { Albums } from "./Albums";
 import { Photos } from "./Photos";
 import { useEffect } from "react";
 import { loadAlbums, loadPhotos } from "../redux/action";
+import { Route, Routes } from "react-router-dom";
 
 
 export const App = () => {
@@ -27,7 +28,10 @@ if (loadingAlbums || loadingPhotos === true) {
   return (
     <div className="container">
       <Albums />
-      <Photos />
+
+      <Routes>
+        <Route path="/:id" element={ <Photos />}/>
+      </Routes>
     </div>
   );
 }
