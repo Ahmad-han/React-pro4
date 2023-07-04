@@ -30,7 +30,7 @@ if (loadingAlbums || loadingPhotos === true) {
       <Albums />
 
       <Routes>
-        <Route path="/:id" element={ <Photos />}/>
+        <Route path="/:id?" element={ <Photos />}/>
       </Routes>
     </div>
   );
