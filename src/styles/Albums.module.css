@@ -1,0 +1,37 @@
+.albums {
+    width: 350px;
+  }
+
+.list {
+    list-style: none;
+  }
+
+.select {
+    margin-top: 15px;
+ }
+
+ .select > a {
+   cursor: pointer;
+   font-size: 20px;
+   font-weight: 600;
+   color: rgb(158, 156, 156);
+   text-decoration: none;
+ }
+
+ .select > a:hover {
+   color: black;
+ }
+
+ .selected {
+   background-color: rgba(173, 216, 230, 0.541);
+   border-radius: 10px;
+  }
+
+ .selected > a {
+   margin-top: 15px;
+   cursor: pointer;
+   font-size: 20px;
+   font-weight: 600;
+   color: rgb(158, 156, 156);
+   color: black;
+ }

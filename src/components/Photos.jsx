@@ -2,6 +2,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { Photo } from "./Photo"
 import { setFilteredText } from "../redux/action"
 import { useParams } from "react-router-dom"
+import style from "../styles/Photos.module.css"
+
+
 
 export const Photos = () => {
 const photos = useSelector((state) => state.photos.photos)
@@ -18,7 +21,7 @@ const filteredPhotos = photos
 
 if (!id) {
     return (
-        <div className="not-active">
+        <div className={style.not_active}>
             <b>← Выберите альбом</b>
         </div>
     )
@@ -30,8 +33,8 @@ const handleChangeText = (event) => {
 
 
     return (
-        <div className="photos">
-            <div className="filter">
+        <div className={style.photos}>
+            <div className={style.filter}>
                 <input 
                 type="text" 
                 placeholder="Поиск по тексту..."

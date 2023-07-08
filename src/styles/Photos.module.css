@@ -1,0 +1,43 @@
+.photos {
+    width: 700px;
+  }
+
+  .filter > input {
+    margin-top: 15px;
+    margin-left: 40px;
+    width: 690px;
+    height: 30px;
+    border: 1px solid lightgray;
+  }
+
+  .photos > ul {
+    list-style: none;
+  }
+  
+  .photos > ul > li {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .photos > ul > li > div {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    font-size: 17px;
+  }
+  
+  .not_active {
+    position: relative;
+    top: 400px;
+    left: 20px;
+  }
+  
+  .not_active > b {
+    font-size: 40px;
+  }
+  
