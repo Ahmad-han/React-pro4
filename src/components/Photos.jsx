@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Photo } from "./Photo"
-import { setFilteredText } from "../redux/action"
 import { useParams } from "react-router-dom"
+import { setFilteredText } from "../redux/Photos/PhotoSlice"
 import style from "../styles/Photos.module.css"
 
 
@@ -27,11 +27,6 @@ if (!id) {
     )
 }
 
-const handleChangeText = (event) => {
-    dispatch(setFilteredText(event.target.value))
-}
-
-
     return (
         <div className={style.photos}>
             <div className={style.filter}>
@@ -39,7 +34,7 @@ const handleChangeText = (event) => {
                 type="text" 
                 placeholder="Поиск по тексту..."
                 value={filter}
-                onChange={handleChangeText}
+                onChange={(event) => dispatch(setFilteredText({text: event.target.value}))}
                 />
             </div>
            <ul>

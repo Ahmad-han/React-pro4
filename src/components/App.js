@@ -2,8 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Albums } from "./Albums";
 import { Photos } from "./Photos";
 import { useEffect } from "react";
-import { loadAlbums, loadPhotos } from "../redux/action";
 import { Route, Routes } from "react-router-dom";
+import { loadAlbums } from "../redux/Albums/AlbumsSlice";
+import { loadPhotos } from "../redux/Photos/PhotoSlice";
 
 
 export const App = () => {
@@ -23,7 +24,6 @@ if (loadingAlbums || loadingPhotos === true) {
     </div>
   )
 }
-
 
   return (
     <div className="container">
