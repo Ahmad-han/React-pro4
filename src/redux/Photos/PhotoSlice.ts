@@ -1,11 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import { initialPhotoState } from "../../types/types"
 
 
-const initialState = {
+const initialState: initialPhotoState = {
     photos: [],
     filter: "",
     loadingPhotos: false
 }
+
+interface setFilteredTextParams {
+    text: string
+}
+
 
 export const loadPhotos = createAsyncThunk(
     "FETCH_PHOTO",
@@ -18,7 +24,7 @@ export const loadPhotos = createAsyncThunk(
 
 export const setFilteredText = createAsyncThunk(
     "FILTER_TEXT",
-    async({ text }) => {
+    async({ text }: setFilteredTextParams) => {
         return {
             text
         }

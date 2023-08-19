@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import { initialAlbumState } from "../../types/types"
 
 
-const initialState = {
+const initialState: initialAlbumState = {
     albums: [],
     selectedUserId: null,
     loadingAlbums: false,

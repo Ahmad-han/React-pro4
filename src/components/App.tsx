@@ -5,12 +5,13 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { loadAlbums } from "../redux/Albums/AlbumsSlice";
 import { loadPhotos } from "../redux/Photos/PhotoSlice";
+import { useTypedDispatch, useTypedSelector } from "../hooks/useTypedSelector";
 
 
 export const App = () => {
-const dispatch = useDispatch()
-const loadingAlbums = useSelector((state) => state.albums.loadingAlbums)
-const loadingPhotos = useSelector((state) => state.photos.loadingPhotos)
+const dispatch = useTypedDispatch()
+const loadingAlbums = useTypedSelector((state) => state.albums.loadingAlbums)
+const loadingPhotos = useTypedSelector((state) => state.photos.loadingPhotos)
 
 useEffect(() => {
   dispatch(loadAlbums())

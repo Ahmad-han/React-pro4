@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux"
 import { Album } from "./Album"
-import style from "../styles/Albums.module.css"
+import style from "../styles/Albums.module.scss"
+import { useTypedSelector } from "../hooks/useTypedSelector"
 
 
-export const Albums = () => {
-const albums = useSelector((state) => state.albums.albums)
+export const Albums: React.FC = () => {
+const albums = useTypedSelector((state) => state.albums.albums)
 
     return (
         <div className={style.albums}>
